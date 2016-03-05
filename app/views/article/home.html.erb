@@ -1,0 +1,25 @@
+<div class="big container">
+
+<div class="blog_title">
+  <h1>LIFE</h1>
+  <h6>By NASH FOWSAR</h6>
+
+</div>
+
+
+
+
+<% @article.each do |t| %>
+  <p>
+    <%= link_to "/article/#{t.id}" do %>
+    <%= t.title%>
+    <% end %>
+  </p>
+
+<% end %>
+
+<%= link_to new_article_path do %>
+  Write something new!
+<% end%>
+
+</div>

@@ -1,0 +1,16 @@
+<%= form_for @article do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :body %>
+    <%= f.text_field :body, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary"%>
+    <%= link_to "Delete", "/article/#{@article.id}", method: :delete, data: {confirm: "Are you sure?"} %>
+  </div>
+<% end %>
